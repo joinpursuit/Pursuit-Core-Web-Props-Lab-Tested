@@ -1,14 +1,20 @@
-# Pursuit Core Web Props Lab
-
 [![Pursuit Logo](https://avatars1.githubusercontent.com/u/5825944?s=200&v=4)](https://pursuit.org)
 
-Build a React app modeled after the image above.
+# Pursuit Core Web Props Lab
+
+![goFundMe](./goFundMe.png)
+
 Included in this repo is an [html file](./reference.html) that renders a static version in HTML.
-Your React app should have the following components:
+Build a React app modeled after the image above.
+
+> Most of your class names and HTML elements can be copied from the reference file.
+
+It should use each of the following components should be included under `src/Components` as a separate `.js` file, like `src/Components/TopBar.js`.
 
 ## Top Bar
 
-Displays the welcome banner for the donation page
+Displays the welcome banner for the donation page.
+We've created this one for you.
 
 ## Recent Donations
 
@@ -17,7 +23,8 @@ It should receive the list of donations as a `donations` prop.
 
 ## Progress
 
-It should receive the total money amount as a `total` prop.
+It should receive the total money amount as a `total` prop and the goal as a `goal` prop.
+Use an `h2` for its heading.
 
 - Displays how much total money has been raised out of the goal
 - (Bonus) Display a progress bar that is filled up to the appropriate percentage
