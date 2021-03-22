@@ -8,7 +8,7 @@ describe("Index", () => {
     cy.contains("Help me go on a vacation");
   })
 
-  it("displays flavor text", () => {
+  it("displays the progress total", () => {
     cy.contains("Raised $441 of $1000");
   });
 

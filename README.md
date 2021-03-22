@@ -9,7 +9,7 @@ Build a React app modeled after the image above.
 
 > Most of your class names and HTML elements can be copied from the reference file.
 
-It should use each of the following components should be included under `src/Components` as a separate `.js` file, like `src/Components/TopBar.js`.
+It should use each of the following components declared under `src/Components` as a separate `.js` file, like `src/Components/TopBar.js`:
 
 ## Top Bar
 
