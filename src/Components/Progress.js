@@ -17,7 +17,7 @@ export default function Progress({ goal, total }) {
           role="progressbar"
           style={{ width: `${percent}%` }}
         >
-          {percent}%
+          {percent.toPrecision(4)}%
         </div>
       </div>
     </>
