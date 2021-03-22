@@ -6,19 +6,19 @@ import "./App.css";
 
 const donations = [
   {
-    amount: 50,
+    amount: 251,
     caption: "do you luv me",
     id: 1,
     name: "Jo",
   },
   {
-    amount: 50,
+    amount: 30,
     caption: "Here take a break from work",
     id: 2,
     name: "John",
   },
   {
-    amount: 50,
+    amount: 20,
     caption: "lol",
     id: 3,
     name: "Michelle",
