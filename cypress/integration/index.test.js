@@ -9,7 +9,7 @@ describe("Index", () => {
   })
 
   it("displays flavor text", () => {
-    cy.contains("Raised $441 of $5000");
+    cy.contains("Raised $441 of $1000");
   });
 
   it("includes form elements", () => {

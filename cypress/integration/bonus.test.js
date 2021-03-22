@@ -4,6 +4,6 @@ describe("Bonus", () => {
   });
 
   it("displays percentage progress", () => {
-    cy.get("input[type=range]").contains("3%");
+    cy.get("input[type=range]").contains("44.10%");
   });
 });
