@@ -40,21 +40,6 @@ jobs:
           command: node ./scripts/parseJunit.js
           when: always
 
-  cypress/run:
-    start: npm start
-    spec: cypress/integration/index.test.js
-    post-steps:
-      - store_test_results:
-          path: ./reports/junit
-      - store_artifacts:
-          path: cypress/videos
-      - store_artifacts:
-          path: cypress/screenshots
-      - run:
-          name: Notify Test Results
-          command: node ./scripts/parseJunit.js
-          when: always
-
 workflows:
   build_and_test:
     jobs:
@@ -62,4 +47,17 @@ workflows:
       - test:
           requires:
             - build
-      - cypress/run
+      - cypress/run:
+          start: npm start
+          spec: cypress/integration/index.test.js
+          post-steps:
+            - store_test_results:
+                path: ./reports/junit
+            - store_artifacts:
+                path: cypress/videos
+            - store_artifacts:
+                path: cypress/screenshots
+            - run:
+                name: Notify Test Results
+                command: node ./scripts/parseJunit.js
+                when: always
