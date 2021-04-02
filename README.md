@@ -48,6 +48,7 @@ Should include:
 - `npm install` to install dependencies
 - `npm run cypress` to open the cypress testing window
 - `npm test` to run jest / node tests
+- `npm run test:bonus` to run jest / node tests **including the bonus tests**
 
 > _Note_: Remember to `git add`, `git commit` and `git push` regularly
 
