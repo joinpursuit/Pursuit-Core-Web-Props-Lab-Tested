@@ -22,7 +22,7 @@ jobs:
           paths:
             - node_modules
 
-  test:
+  jest_test:
     docker:
       - image: cimg/node:15.11.0
     working_directory: ~/repo
@@ -44,10 +44,11 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test:
+      - jest_test:
           requires:
             - build
       - cypress/run:
+          name: Cypress Tests
           start: npm start
           spec: cypress/integration/index.test.js
           post-steps:
