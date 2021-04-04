@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "jest-junit": "^12.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -14,7 +15,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --ci --reporters=default --reporters=jest-junit --testPathIgnorePatterns=bonus",
+    "test:bonus": "react-scripts test",
     "eject": "react-scripts eject",
     "cypress": "./node_modules/.bin/cypress open"
   },
@@ -41,5 +43,10 @@
     "fast-glob": "^3.2.5",
     "junitxml-to-javascript": "^1.1.4",
     "node-fetch": "^2.6.1"
+  },
+  "jest-junit": {
+    "suiteNameTemplate": "{filename}",
+    "classNameTemplate": "{filename}",
+    "outputDirectory": "reports/junit"
   }
 }
