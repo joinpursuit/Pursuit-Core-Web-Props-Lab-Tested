@@ -3,6 +3,7 @@ import React from "react";
 import TopBar from "./Components/TopBar";
 
 import "./App.css";
+import RecentDonations from "./Components/RecentDonations";
 
 const donations = [
   {
@@ -36,7 +37,7 @@ const donations = [
     name: "Sam",
   },
 ];
-
+//{users.map((user)=>{return <Person name={user.name} age={user.age} />; })}
 export default class App extends React.Component {
   render() {
     return (
@@ -44,7 +45,7 @@ export default class App extends React.Component {
         <TopBar />
         <div className="container">
           <div className="row">
-            {/* TODO: Donations */}
+          {donations.map((user)=> <RecentDonations  amount ={user.amount} caption ={user.caption}  name={user.name}/>)}
 
             <div className="col-8">
               {/* TODO: Progress */}
