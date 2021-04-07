@@ -3,6 +3,7 @@ import React from "react";
 import TopBar from "./Components/TopBar";
 
 import "./App.css";
+import RecentDonations from "./Components/RecentDonations";
 
 const donations = [
   {
@@ -39,18 +40,28 @@ const donations = [
 
 export default class App extends React.Component {
   render() {
+    const donationsRecent = donations.map((donation) => {
+      return (
+        <RecentDonations
+          name={donation.name}
+          amount={donation.amount}
+          caption={donation.caption}
+          key={donation.id}
+        />
+      );
+    });
     return (
       <>
         <TopBar />
         <div className="container">
+            <h3>Recent Donations</h3>
+            {donationsRecent}
+            </div>
           <div className="row">
-            {/* TODO: Donations */}
-
             <div className="col-8">
               {/* TODO: Progress */}
               <hr />
               {/* TODO: DonationForm */}
-            </div>
           </div>
         </div>
       </>
