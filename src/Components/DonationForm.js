@@ -1,6 +1,6 @@
 import React from "react";
 
-const DonationForm = () => {
+const DonationForm = (props) => {
   return null;
 };
 

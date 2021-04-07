@@ -1,6 +1,9 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+import ProgressBar from "./Components/ProgressBar";
 
 import "./App.css";
 
@@ -37,16 +40,30 @@ const donations = [
   },
 ];
 
-export default class App extends React.Component {
+const funding = donations.map((donation) => {
+  return (
+    <RecentDonations
+      name={donation.name}
+      amount={donation.amount}
+      caption={donation.caption}
+      />
+  )
+  })
+
+class App extends React.Component {
   render() {
     return (
       <>
         <TopBar />
+        {/* <h5 className='my-4'>Recent Donations</h5> */}
+          {funding}
         <div className="container">
           <div className="row">
             {/* TODO: Donations */}
 
             <div className="col-8">
+              <Progress />
+              <ProgressBar />
               {/* TODO: Progress */}
               <hr />
               {/* TODO: DonationForm */}
@@ -57,3 +74,23 @@ export default class App extends React.Component {
     );
   }
 }
+
+// function App() {
+//   const funding = donations.map((donation) => {
+//     return (
+//       <RecentDonations
+//         name={donation.name}
+//         amount={donation.amount}
+//         caption={donation.caption}
+//       />
+//     );
+//   });
+//   return (
+//     <div className="App">
+//       <TopBar />
+//       {funding}
+//     </div>
+//   );
+// }
+
+export default App;
