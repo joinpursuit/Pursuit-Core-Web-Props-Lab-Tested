@@ -1,60 +1,73 @@
 /* Your code here! */
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  margin-bottom: 20px;
 }
 
-.row{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    grid-column: 1/2;
-    /* height: 600px; */
-    margin: 10px;
-    padding: 10px;
-    
-    /* grid-row: 2/3; */
-    background: lightgray;
-
-
+.donation-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.donate{
-    background-color:  #4CAF50;
-}
-.progress-section{
-    display: flex;
-    flex-direction: column;
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-column: 1/2;
+  /* height: 600px; */
+  margin: 10px;
+  padding: 10px;
 
+  /* grid-row: 2/3; */
+  background: lightgray;
+}
+
+.donate {
+  background-color: #4caf50;
+  width: 70px;
+  border: none;
+  color: white;
+  margin-left: 400px;
+  border-radius: 5px;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.slider {
+  width: 100%;
 }
 .progress {
-    width: 44.10%;
-    height: 20px;
-    background-color: #4CAF50;
-    color:white;
-    
+  width: 44.1%;
+  height: 20px;
+  background-color: #4caf50;
+  color: white;
+}
 
+ul {
+    list-style-type:none;
+    
 }
 
 .progress-bar {
-    width:100%;
-    background-color: lightgrey;
+  width: 100%;
+  background-color: lightgrey;
 }
 
 .circle {
-    background: lightskyblue;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-
+  background: lightskyblue;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
 }
 
-.amount-bar{
-    width: 100%;
-    background-color: lightgray;
-    height: 5px;
-    margin-top: 20px;
-
+.amount-bar {
+  width: 100%;
+  background-color: lightgray;
+  height: 5px;
+  margin-top: 20px;
 }
