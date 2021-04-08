@@ -12,7 +12,7 @@ const DonationForm = () => {
       <input type="range" min="5" max="1000" className="slider"/>
       </div>
       <h2>$5</h2>
-      <button>Donate</button>
+      <button className="donate">Donate</button>
     </div>
   )
 };
