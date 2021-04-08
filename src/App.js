@@ -3,7 +3,7 @@ import React from "react";
 import TopBar from "./Components/TopBar";
 
 import "./App.css";
-import RecentDonations from "./Components/RecentDonations";
+import RecentDonations from "./Components/Donation";
 import Progress from "./Components/Progress"
 import DonationForm from "./Components/DonationForm";
 
@@ -51,16 +51,9 @@ export default class App extends React.Component {
         <TopBar />
         <div className="container">
           <div className="row">
-            {donations.map((user) => (
-              <RecentDonations
-                amount={user.amount}
-                caption={user.caption}
-                name={user.name}
-              />
-            ))}
-
+              <RecentDonations donations={donations}/>
             <div className="col-8">
-              <Progress total = {amount.total} goal = {amount.goal}/>
+              <Progress total={amount.total} goal={amount.goal} />
               <hr />
               <DonationForm />
             </div>
