@@ -1,1 +1,51 @@
 /* Your code here! */
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+}
+
+.row{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: 1/2;
+    /* height: 600px; */
+    margin: 10px;
+    padding: 10px;
+    
+    /* grid-row: 2/3; */
+    background: lightgray;
+
+
+}
+.bar {
+    width: 44.10%;
+    height: 20px;
+    background-color: #4CAF50;
+    color:white;
+    
+
+}
+
+.progress-bar {
+    width:100%;
+    background-color: lightgrey;
+}
+
+.circle {
+    background: lightskyblue;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+
+}
+
+.amount-bar{
+    width: 100%;
+    background-color: lightgray;
+    height: 5px;
+    margin-top: 20px;
+
+}
