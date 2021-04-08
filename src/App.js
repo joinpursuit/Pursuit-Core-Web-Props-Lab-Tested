@@ -1,6 +1,8 @@
 import React from "react";
-
+import DonationForm from "./Components/DonationForm.js";
 import TopBar from "./Components/TopBar";
+import Progress from "./Components/Progress.js";
+import RecentDonations from "./Components/RecentDonations.js";
 
 import "./App.css";
 
@@ -39,17 +41,20 @@ const donations = [
 
 export default class App extends React.Component {
   render() {
+    let total = 0;
+    donations.map((donos) => {
+      return total += donos.amount;
+    });
     return (
       <>
         <TopBar />
         <div className="container">
           <div className="row">
-            {/* TODO: Donations */}
-
+            <RecentDonations donations={donations}/>
             <div className="col-8">
-              {/* TODO: Progress */}
+              <Progress total={total} goal={1000} />
               <hr />
-              {/* TODO: DonationForm */}
+              <DonationForm />
             </div>
           </div>
         </div>
