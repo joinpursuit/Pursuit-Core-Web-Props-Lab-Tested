@@ -3,10 +3,10 @@ import React from "react";
 
 
 const Progress = (props) => {
-  const {sum} = props;
+  const {total, goal} = props;
   return (
     <div>
-      <h2> Raised ${sum} of $1000 </h2>
+      <h2>Raised ${total} of ${goal}</h2>
     </div>
   )
 };

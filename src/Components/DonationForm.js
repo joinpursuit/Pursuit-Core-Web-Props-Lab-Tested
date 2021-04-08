@@ -4,12 +4,12 @@ const DonationForm = () => {
   return (
     <div>
       <form>
-        <label for="name-label"> Name </label>
-        <input id="name-label"></input>
-        <label for="caption-label"> Caption</label>
-        <input id="caption-label"></input>
-        <label for="amount-label">Amount to Donate</label>
-        <input type="range" id="amount-label" min="0" max="1000"></input>
+        <label > Name </label>
+        <input type="text" placeholder="John Doe" id="name-label"/>
+        <label> Caption</label>
+        <input type="text" placeholder="..." id="caption-label"/>
+        <label>Amount to Donate</label>
+        <input type="range" id="amount-label" min="5" max="1000"/>
         <button>Donate</button>
       </form>
     </div>

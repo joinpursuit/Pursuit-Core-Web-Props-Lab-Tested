@@ -1,11 +1,17 @@
 import React from "react";
+import RecentDonation from "./RecentDonation.js"
+
 
 const RecentDonations = (props) => {
-  const {amount, caption, id, name} = props;
+  const {donations} = props;
+  const posts = donations.map((donos) => {
+    return <RecentDonation amount={donos.amount} caption={donos.caption} name={donos.name} key={donos.id}/>
+  
+  })
   return (
     <div>
-     <p> {name} donated ${amount} </p>
-     <p> {caption} </p>
+      <h5>Recent Donations</h5>
+      <ul> {posts}</ul>
     </div>
   );
 };
