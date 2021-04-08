@@ -2,7 +2,7 @@ import React from "react";
 import RecentDonation from "./RecentDonation"
 
 const RecentDonations = (props) => {
-  const { donations} = props;
+  const { donations } = props;
 
   const showDonations = donations.map(donation=>{
     return <RecentDonation name={donation.name}  amount={donation.amount}  caption={donation.caption} key={donation.id}/>
