@@ -1,9 +1,11 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
-
-import "./App.css";
 import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+
+import DonationForm from "./Components/DonationForm";
+import "./App.css";
 
 const donations = [
   {
@@ -38,6 +40,16 @@ const donations = [
   },
 ];
 
+// const showProgress = {
+//   total: 441,
+//   goal: 1000,
+// };
+
+const totalTest = {
+  sumAmount: 0,
+  goal: 1000,
+};
+
 export default class App extends React.Component {
   render() {
     const donationsRecent = donations.map((donation) => {
@@ -50,18 +62,42 @@ export default class App extends React.Component {
         />
       );
     });
+    const progressNow = () => {
+      donations.forEach((donation) => {
+        totalTest.sumAmount += donation.amount;
+      });
+      return <Progress sumAmount={totalTest.sumAmount} goal={totalTest.goal} />;
+    };
+    const newProgress = progressNow();
+
     return (
       <>
         <TopBar />
         <div className="container">
-            <h3>Recent Donations</h3>
-            {donationsRecent}
-            </div>
           <div className="row">
+            <ul className="col-4 list-unstyled recent-donations">
+              <h3>Recent Donations</h3>
+              {donationsRecent}
+            </ul>
             <div className="col-8">
+              {newProgress}
+              {/* <div className="progress"> */}
+                {/* <div
+                  className="progress-bar bg-success"
+                  role="progressbar"
+                  style="width: 25%;"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  25%
+                </div> */}
+              {/* </div> */}
               {/* TODO: Progress */}
               <hr />
+              <DonationForm />
               {/* TODO: DonationForm */}
+            </div>
           </div>
         </div>
       </>

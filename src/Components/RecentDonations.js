@@ -5,11 +5,11 @@ const RecentDonations = (props) => {
   const {amount, caption, name} = props;
 
   return (
-    <div>
-      <h3>{name} donated $ {amount}</h3>
+    <li>
+      <h3>{name} donated ${amount}</h3>
       <p>{caption}</p>
 
-    </div>
+    </li>
   );
 };
 

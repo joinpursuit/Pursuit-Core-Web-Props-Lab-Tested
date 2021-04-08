@@ -1,11 +1,13 @@
 .Me {
-    font-size: xxx-large;
+    font-size: 90px;
     font-family: cursive;
     font-style: italic;
 }
 
 .jumbotron {
-    font-size: xx-large;
+    font-size: xxx-large;
+}
 
-
+.jumbotron {
+    margin: 5%;
 }
