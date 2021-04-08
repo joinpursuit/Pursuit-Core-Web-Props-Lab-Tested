@@ -20,13 +20,4 @@ class Progress extends React.Component {
   };
 }
 
-// const Progress = (props) => {
-//   const { goal, total } = props;
-//   return (
-//     <h2>
-//       Raised ${total} of ${goal}
-//     </h2>
-//   );
-// };
-
 export default Progress;

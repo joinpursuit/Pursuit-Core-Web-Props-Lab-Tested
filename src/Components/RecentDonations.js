@@ -3,7 +3,7 @@ import React from "react";
 const RecentDonations = (props) => {
   const listDonations = props.donations.map(donation => {
     return (
-      <div role='listitem'>
+      <div role='listitem'key={donation.id}>
         <p>
           {donation.name} donated ${donation.amount}
         </p>

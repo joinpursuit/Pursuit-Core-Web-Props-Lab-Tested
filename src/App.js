@@ -54,16 +54,15 @@ export default class App extends React.Component {
         <TopBar />
         <div className="container">
           <div className="row">
-            {/* TODO: Donations */}
+            {/*Donations */}
             <div>
-              <RecentDonations donations={donations} key={donations}/>
-              {/* <div>{listDonations}</div> */}
+              <RecentDonations donations={donations} />
             </div>
             <div className="col-8">
-              {/* TODO: Progress */}
+              {/* Progress */}
               <Progress goal={goal} total={total} />
               <hr />
-              {/* TODO: DonationForm */}
+              {/* DonationForm */}
               <DonationForm />
             </div>
           </div>
