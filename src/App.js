@@ -41,17 +41,21 @@ const donations = [
 
 export default class App extends React.Component {
   render() {
-    const donated = donations.map(donation =>{
-      return <RecentDonations name={donation.name} amount={donation.amount} caption={donation.caption} key={donation.id}/>
-    })
+    // const donated = donations.map(donation =>{
+    //   return <RecentDonations name={donation.name} amount={donation.amount} caption={donation.caption} key={donation.id}/>
+    // })
+    // const total = Totals.reduce(donations =>{
+    //   return <Progress 
+    // })
     return (
       <>
         <TopBar />
         <div className="container">
           <div className="row">
             {/* TODO: Donations */}
-              {donated}
-
+              
+              <RecentDonations />
+              
             <div className="col-8">
               {/* TODO: Progress */}
               <hr />

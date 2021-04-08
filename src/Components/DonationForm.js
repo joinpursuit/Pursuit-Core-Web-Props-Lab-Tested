@@ -1,18 +1,29 @@
 import React from "react";
 
-const DonationForm = () => {
-  return (
-    <div>
-    <form>
-      <input id="NameInput" placeholder="John Doe" type="text"/>
-      <input id="captionInput" placeholder="..." type="text"/>
-      <label for="donationBar">Amount</label>
-      <input type="range" id="donationBar" name="Amount" min="0" max="1000" value="5" step="10" />
-      <button type="button">Donate</button>
-
-    </form>
-    </div>
-  )
-};
+class DonationForm extends React.Component {
+  render() {
+    return (
+      <form>
+        <div className="form-group">
+          <label>Name</label>
+          <input
+            className="form-control" id="nameInput" placeholder="John Doe" type="text"/>
+        </div>
+        <div className="form-group">
+          <label>Caption</label>
+          <input className="form-control" id="captionInput" placeholder="..." type="text"/>
+        </div>
+        <div className="form-group">
+          <label>Amount to Donate</label>
+          <input className="custom-range" id="amountInput" min="5"max="1000"type="range"/>
+            <p>$5</p>
+            <button type="button" className="btn btn-lg btn-success my-4">
+              Donate
+            </button>
+        </div>
+      </form>
+    );
+  }
+}
 
 export default DonationForm;
