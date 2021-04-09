@@ -1,0 +1,26 @@
+.ProgressSec h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.ProgressSec h2 > span {
+    color: #6C757D;
+}
+
+.ProgressSec > div {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.progress {
+    background-color: #2DA745;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 44%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+

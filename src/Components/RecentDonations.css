@@ -1,0 +1,19 @@
+.Recent{
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 30%;
+}
+
+.Recent ul {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 40px;
+}
+
+.Recent > h5 {
+    margin-bottom: 20px;
+}
+
