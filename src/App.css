@@ -1,12 +1,8 @@
 /* Your code here! */
-.container {
-    border: purple solid 5px;
-}
+
 .row {
-    border: green solid 5px;
     display: flex;
     justify-content: space-between;
 }
-.col-8 {
-    border: orange solid 5px;
-}
+
+
