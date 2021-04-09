@@ -1,6 +1,7 @@
 import React from "react";
 import TopBar from "./Components/TopBar";
 import Progress from "./Components/Progress";
+import Donations from "./Components/Donations";
 import DonationForm from "./Components/DonationForm";
 import RecentDonations from "./Components/RecentDonations";
 import "./App.css";
@@ -38,8 +39,22 @@ const donations = [
   },
 ];
 
-export default class App extends React.Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+
+    const donation = donations.map((donation) => {
+      return (
+        <Donations
+          name={donation.name}
+          amount={donation.amount}
+          caption={donation.caption}
+          key={donation.id}
+        />
+      );
+    });
     return (
       <>
         <TopBar />
@@ -58,3 +73,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;
