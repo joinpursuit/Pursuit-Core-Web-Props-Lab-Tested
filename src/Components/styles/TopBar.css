@@ -6,8 +6,13 @@
 
 .jumbotron {
     font-size: xxx-large;
+    
 }
 
 .jumbotron {
-    margin: 5%;
+    margin: 2%;
+}
+
+.jumbotron-heading {
+    display: inline;
 }

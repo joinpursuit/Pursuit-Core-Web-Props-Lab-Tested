@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     background-color: #E9ECEF;
-    padding-bottom: 50px;
+    height: 60vh;
+    /* padding-bottom: 10px; */
 }
 
 li {

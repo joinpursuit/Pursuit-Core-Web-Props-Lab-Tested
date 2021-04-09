@@ -1,10 +1,10 @@
 import React from "react";
 
 const Progress = (props) => {
-  const {sumAmount, goal} = props
+  const {total, goal} = props
   return (
     <div>
-      <h2>Raised ${sumAmount} of <span className='text-muted'>${goal}</span> </h2>
+      <h2>Raised ${total} of <span className='text-muted'>${goal}</span></h2>
     </div>
   );
 };

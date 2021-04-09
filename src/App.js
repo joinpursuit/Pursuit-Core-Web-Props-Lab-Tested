@@ -3,9 +3,10 @@ import React from "react";
 import TopBar from "./Components/TopBar";
 import RecentDonations from "./Components/RecentDonations";
 import Progress from "./Components/Progress";
-
+import ProgressBar from "./Components/ProgressBar"
 import DonationForm from "./Components/DonationForm";
 import "./App.css";
+import { getQueriesForElement } from "@testing-library/dom";
 
 const donations = [
   {
@@ -46,9 +47,14 @@ const donations = [
 // };
 
 const totalTest = {
-  sumAmount: 0,
+  total: 0,
   goal: 1000,
 };
+
+const progressBarNow = {
+  bgcolor: "#28a745",
+ completed: 0
+}
 
 export default class App extends React.Component {
   render() {
@@ -64,11 +70,17 @@ export default class App extends React.Component {
     });
     const progressNow = () => {
       donations.forEach((donation) => {
-        totalTest.sumAmount += donation.amount;
+        totalTest.total += donation.amount;
       });
-      return <Progress sumAmount={totalTest.sumAmount} goal={totalTest.goal} />;
+      return <Progress total={totalTest.total} goal={totalTest.goal}/>;
     };
     const newProgress = progressNow();
+
+    const progressBar = () => {
+       progressBarNow.completed= (totalTest.total / totalTest.goal * 100).toFixed(2)
+      return <ProgressBar bgcolor={progressBarNow.bgcolor} completed={progressBarNow.completed} />
+    }
+    const newProgressBar = progressBar()
 
     return (
       <>
@@ -76,23 +88,14 @@ export default class App extends React.Component {
         <div className="container">
           <div className="row">
             <ul className="col-4 list-unstyled recent-donations">
-              <h3>Recent Donations</h3>
-              {donationsRecent}
+            <h3>Recent Donations</h3>
+               {donationsRecent}
             </ul>
             <div className="col-8">
               {newProgress}
-              {/* <div className="progress"> */}
-                {/* <div
-                  className="progress-bar bg-success"
-                  role="progressbar"
-                  style="width: 25%;"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  25%
-                </div> */}
-              {/* </div> */}
+             
+               {newProgressBar}
+               
               {/* TODO: Progress */}
               <hr />
               <DonationForm />
