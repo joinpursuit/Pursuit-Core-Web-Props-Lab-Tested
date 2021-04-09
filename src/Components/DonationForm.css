@@ -1,0 +1,56 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"] {
+    border: 2px solid #eee ;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+input[type="range"]{
+    width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    margin-top: -4px;
+    background-color: #387BFF;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    border: none;
+    border-radius: 50px;
+    background-color: #eee;
+    height: 8px;
+}
+
+div {
+    align-self: flex-end;
+}
+
+div > h2 {
+    text-align: right;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    background-color: #2DA745;
+    color: white;
+    padding: 8px 15px;
+}
+
+button:hover {
+    background-color: #238838;
+    cursor: pointer;
+}
+
