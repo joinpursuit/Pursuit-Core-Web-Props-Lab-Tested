@@ -1,5 +1,6 @@
 import React from "react";
 import RecentDonation from "./RecentDonation"
+import "./styles/RecentDonations.css";
 
 const RecentDonations = (props) => {
   const { donations } = props;
@@ -8,7 +9,7 @@ const RecentDonations = (props) => {
     return <RecentDonation name={donation.name}  amount={donation.amount}  caption={donation.caption} key={donation.id}/>
   })
   return (
-    <div>
+    <div className="recentDonations">
       
         <h5>Recent Donations</h5>
         <ul>
