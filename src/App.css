@@ -1,1 +1,16 @@
-/* Your code here! */
+#me {
+  font-family: fantasy;
+  font-size: 70px;
+}
+
+.recent-donations {
+  background-color: #eee;
+}
+
+#percentage {
+  width: 44.1%;
+  color: white;
+  background-color: rgb(2, 169, 2);
+  display: flex;
+  justify-content: center;
+}
