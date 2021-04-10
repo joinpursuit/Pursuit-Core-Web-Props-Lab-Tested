@@ -9,9 +9,8 @@ return (
        {donations.map(donation =>{
          debugger
          return (
-           <ul>
-              <li key={donation.id}>{donation.name} donated ${donation.amount}</li>
-              <li key={donation.id}>{donation.caption}</li>
+           <ul key={donation.id}>
+              <li>{donation.name} donated ${donation.amount}{donation.caption}</li>
             </ul>
           )
         })}
