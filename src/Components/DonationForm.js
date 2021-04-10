@@ -1,4 +1,6 @@
 import React from "react";
+import "./donationForm.css"
+
 
 // const donation = {
 //   total: 441,
@@ -21,7 +23,7 @@ const DonationForm = () => {
 
       <label for="slider">Amount to Donate</label>
       <input id="slider" type="range" min="5" max="1000"/>
-      <p>$5</p>
+      <p className="amount">$5</p>
       <button type="submit">Donate</button>
     </form>
   );

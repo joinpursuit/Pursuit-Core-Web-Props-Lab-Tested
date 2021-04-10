@@ -1,4 +1,5 @@
 import React from "react";
+import "./progress.css";
 
 const Progress = (props) => {
   const { total, goal } = props;
@@ -8,9 +9,11 @@ const Progress = (props) => {
         Raised ${total} of ${goal}
       </h2>
       <label for="goal"></label>
-      <progress id="goal" value="441" max="1000">
-        44.10%
-      </progress>
+      <div className="myProgress">
+        <div id="goal" value="441" max="1000">
+          44.10%
+        </div>
+      </div>
     </div>
   );
 };
