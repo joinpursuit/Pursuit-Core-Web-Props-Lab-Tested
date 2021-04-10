@@ -1,17 +1,22 @@
 import React from "react";
 
 const RecentDonations = (props) => {
-  const donations = props.donations;
-  const donationsInfo = donations.map(donation =>{
-    <li key={donation.id}>
-      {donation.name} {donation.amount} {donation.caption}
-    </li>
-    return ( 
-      <ul>
-        {donationsInfo}
-      </ul>
-    )
-  })
+const {donations} = props
+// debugger
+return (
+  <div className="Classes">
+    <h1>Recent Donations</h1>
+       {donations.map(donation =>{
+         debugger
+         return (
+           <ul>
+              <li key={donation.id}>{donation.name} donated ${donation.amount}</li>
+              <li key={donation.id}>{donation.caption}</li>
+            </ul>
+          )
+        })}
+      </div>
+    );
   };
   debugger
 
