@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+p, button {
+    align-self: flex-end;
+}
+
+button {
+
+    color: white;
+    background-color: green;
+}
