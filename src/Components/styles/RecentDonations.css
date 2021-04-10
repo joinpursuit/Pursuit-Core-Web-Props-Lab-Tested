@@ -1,0 +1,12 @@
+
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    background-color: #E9ECEF;
+    padding-bottom: 50px;
+}
+
+li {
+    list-style: none;
+}

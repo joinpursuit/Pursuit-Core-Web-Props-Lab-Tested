@@ -1,0 +1,17 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: green;
+    width: 80px;
+    color:white;
+    margin-left: 87%;
+}
+
+#output{
+    margin-left: 87%;
+    font-weight: bold;
+    font-size:xx-large;
+}
