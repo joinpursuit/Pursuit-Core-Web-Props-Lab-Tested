@@ -1,4 +1,5 @@
 import React from "react";
+// import App from "./App.js"
 
 const RecentDonations = (props) => {
   const { amount, caption, name } = props;

@@ -1,13 +1,14 @@
 import React from "react";
 
 const Progress = (props) => {
-  // const {goal, total} = props;
+  // const { goal, total } = props;
+  // debugger
   return (
     // <!-- RIGHT SIDE / INFO & FORM -->
     <div className="col-8">
       {/* <!-- INFO --> */}
       <h2 className="mb-4">
-        Raised $123 of <span className="text-muted">$246</span>
+        Raised $441 of <span className="text-muted">$1000</span>
       </h2>
       <div className="progress">
         <div

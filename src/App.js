@@ -6,16 +6,16 @@ import Progress from "./Components/Progress.js";
 import DonationForm from "./Components/DonationForm.js";
 import "./App.css";
 
-// const donationGoal = [
-//   {
-//     goal:246,
-//     total:123
-//   },
-//   {
-//     goal:441,
-//     total:1000
-//   }
-// ];
+const donationGoal = [
+  // {
+  //   goal:246,
+  //   total:123
+  // },
+  {
+    goal:441,
+    total:1000
+  }
+];
 
 const donations = [
   {
