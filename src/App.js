@@ -52,9 +52,6 @@ export default class App extends React.Component {
         <div className="container">
           <div className="row">
             <RecentDonations donations={donations}></RecentDonations>
-          {/* {donations.map((donation) => {
-          return <RecentDonations name={donation.name} amount={donation.amount} caption={donation.caption}/>
-          })} */}
             <div className="col-8">
               {/* TODO: Progress */}
               <hr />

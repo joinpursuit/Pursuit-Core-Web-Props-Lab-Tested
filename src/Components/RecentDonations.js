@@ -10,7 +10,7 @@ return (
          debugger
          return (
            <ul key={donation.id}>
-              <li>{donation.name} donated ${donation.amount}{donation.caption}</li>
+              <li>{donation.name} donated ${donation.amount} {donation.caption}</li>
             </ul>
           )
         })}
