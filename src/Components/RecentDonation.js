@@ -1,8 +1,10 @@
 import React from "react";
+import"../Styles/RecentDonation.css"
+
 
 const RecentDonation =({name, amount, caption})=>{
     return(
-        <li>{name} donated ${amount}{caption}</li>
+        <li><strong>{name} donated ${amount}</strong><br></br>{caption}</li>
     )
 }
 

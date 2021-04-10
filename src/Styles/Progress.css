@@ -1,24 +1,13 @@
-/* progress[value] {
-    width: 250px;
-    height: 20px;
-    background-color:lightgreen;
-}
-
-progress {
-    border-radius: 9px;
-
-} */
-
-.progress-container{
-    height:25px;
-    width: 1000px;
-    background-color: lightgrey;
-
-}
-
-.progress-bar{
-    background-color: green;
-    /* height:25px;
-    width: 44.1px;     */
-
-}
+#myProgress {
+    background-color: #ddd;
+    width: 100%;
+  }
+  
+  #myBar {
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    width: 44.1%;
+  }
