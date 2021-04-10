@@ -11,14 +11,14 @@ const DonationForm = () => {
 				<label>Caption</label>
 				<input type="text" placeholder="..."></input>
 			</div>
-			<div class="slidecontainer">
+			<div className="slidecontainer">
 				<label>Amount to Donate</label>
 				<input
 					type="range"
 					min="5"
 					max="1000"
-					value="5"
-					class="slider"
+					defaultValue="5"
+					className="slider"
 					id="myRange"
 				></input>
 			</div>

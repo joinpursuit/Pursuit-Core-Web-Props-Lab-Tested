@@ -1,7 +1,7 @@
 import React from "react";
 
 const RecentDonations = (props) => {
-  const { name, caption, amount } = props;
+  const { name, caption, amount, id} = props;
   return (
     <div className="DonationsContainer">
       <h6>{name} donated ${amount}</h6>
