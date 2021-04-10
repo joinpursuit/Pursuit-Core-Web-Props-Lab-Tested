@@ -1,10 +1,14 @@
 import React from "react";
 
-const Progress = () => {
+
+
+const Progress = ({ total, goal }) => {
+  
+
   return (
     <section>
-      <h3>Raised $441 of $1000</h3>
-      <label for="ProgressBar">44.10%
+      <h2>Raised ${total} of ${goal}</h2>
+      <label htmlFor="ProgressBar">44.10%
         <progress id="ProgressBar" value="441" max="1000"></progress>
       </label>
     </section>
