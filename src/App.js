@@ -1,6 +1,7 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
+import RecentDonations from "./Components/RecentDonations";
 
 import "./App.css";
 
@@ -44,8 +45,20 @@ export default class App extends React.Component {
         <TopBar />
         <div className="container">
           <div className="row">
-            {/* TODO: Donations */}
-
+            <ul className="col-4 list-unstyled recent-donations">
+              <h5 className="my-4">Recent Donations</h5>
+              {donations.map((donation) => {
+                return (
+                  <RecentDonations
+                    name={donation.name}
+                    amount={donation.amount}
+                    caption={donation.caption}
+                    id={donation.id}
+                    key={donation.id}
+                  />
+                );
+              })}
+            </ul>
             <div className="col-8">
               {/* TODO: Progress */}
               <hr />
