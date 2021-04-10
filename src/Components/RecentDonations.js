@@ -11,6 +11,7 @@ const RecentDonations = (props) => {
         name={donation.name}
         amount={donation.amount}
         caption={donation.caption}
+        key={donation.id}
       />
     );
   });

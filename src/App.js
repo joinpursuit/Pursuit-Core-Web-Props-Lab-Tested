@@ -4,6 +4,7 @@ import TopBar from "./Components/TopBar";
 import RecentDonations from "./Components/RecentDonations";
 import Progress from "./Components/Progress";
 import ProgressBar from "./Components/ProgressBar";
+import DonationForm from "./Components/DonationForm";
 
 import "./App.css";
 
@@ -60,6 +61,7 @@ class App extends React.Component {
               <ProgressBar />
               {/* TODO: Progress */}
               <hr />
+              <DonationForm />
               {/* TODO: DonationForm */}
             </div>
           </div>
