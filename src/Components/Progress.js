@@ -1,12 +1,18 @@
 import React from "react";
 
-const Progress = () => {
+const Progress = (props) => {
+  const {total, goal} = props
   return (
-    <div className="col-8">
+    <>
       <h2 className="mb-4">
-        Raised $441 of <span className="text-muted">$1000</span>
+        Raised ${total} of <span className="text-muted">${goal}</span>
       </h2>
-    </div>
+       <div className="progress">
+       <div className="progress-bar bg-success" role="progressbar" style={{width: "25%"}} aria-valuenow="25"
+         aria-valuemin="0" aria-valuemax="100">25%</div>
+     </div>
+     <hr />
+     </>
   );
 };
 

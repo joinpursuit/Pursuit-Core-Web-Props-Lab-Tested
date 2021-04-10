@@ -40,29 +40,23 @@ const donations = [
   },
 ];
 
-const funding = donations.map((donation) => {
-  return (
-    <RecentDonations
-      name={donation.name}
-      amount={donation.amount}
-      caption={donation.caption}
-      />
-  )
-  })
 
 class App extends React.Component {
   render() {
     return (
       <>
         <TopBar />
-        {/* <h5 className='my-4'>Recent Donations</h5> */}
-          {funding}
+
         <div className="container">
           <div className="row">
+
+            <RecentDonations 
+            donations={donations}/>
+            
             {/* TODO: Donations */}
 
             <div className="col-8">
-              <Progress />
+              <Progress total={441} goal={1000}/>
               <ProgressBar />
               {/* TODO: Progress */}
               <hr />
@@ -75,22 +69,5 @@ class App extends React.Component {
   }
 }
 
-// function App() {
-//   const funding = donations.map((donation) => {
-//     return (
-//       <RecentDonations
-//         name={donation.name}
-//         amount={donation.amount}
-//         caption={donation.caption}
-//       />
-//     );
-//   });
-//   return (
-//     <div className="App">
-//       <TopBar />
-//       {funding}
-//     </div>
-//   );
-// }
 
 export default App;
