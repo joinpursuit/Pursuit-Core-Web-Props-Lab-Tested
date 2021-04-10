@@ -1,4 +1,3 @@
-import React from "react";
 
 const Donation = (props) => {
   let { amount, caption, name } = props;
