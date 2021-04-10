@@ -6,8 +6,8 @@ const Progress = (props) => {
   return (
     <div>
       <h2>Raised ${total} of ${goal}</h2>
-      <div>
-        {percentage}%
+      <div className="progress">
+        {percentage.toFixed(2)}%
       </div>
     </div>
   );
