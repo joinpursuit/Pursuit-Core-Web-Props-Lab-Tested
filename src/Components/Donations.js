@@ -6,20 +6,13 @@ class Donations extends React.Component {
     super(props)
   }
   render() {
-
+    
+    const { name, amount, caption} = this.props;
     return (
       <>
         <li>
-          <h6> {props} donated $251</h6>
-          <p>do you luv me</p>
-        </li>
-        <li>
-          <h6>Jo donated $251</h6>
-          <p>do you luv me</p>
-        </li>
-        <li>
-          <h6>Jo donated $251</h6>
-          <p>do you luv me</p>
+          <h6> {name} donated ${amount}</h6>
+          <p>{caption}</p>
         </li>
       </>
     );
