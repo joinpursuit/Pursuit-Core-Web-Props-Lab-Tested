@@ -1,1 +1,45 @@
-/* Your code here! */
+
+
+.container {
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template: 2fr 4fr/ 2fr 4fr;
+  margin-top: 5px;
+  /* border: solid 2px green; */
+  width: 2000px;
+  height: 800px;
+  /* margin-right: 90%; */
+}
+
+.donationContainer {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px purple solid; */
+  width: 16rem;
+}
+
+#donationContainer > ul > li {
+  /* border: solid red 2px; */
+  width: 200px;
+}
+
+
+.my-4 {
+  text-align: center;
+}
+
+.col-8 {
+  /* border: 2px solid blue; */
+  width: 80rem;
+}
+
+.row {
+  
+  /* border: solid black 2px; */
+  width: 300px;
+  height: 600px;
+  margin-right: 40px;
+  background-color: lightgray;
+ 
+}
