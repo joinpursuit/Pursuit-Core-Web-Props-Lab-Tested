@@ -39,8 +39,9 @@ const donations = [
     name: "Sam",
   },
 ];
+
 const amount = {
-  total: 441,
+  total: donations.reduce((a, b) => a + (b.amount || 0), 0),
   goal: 1000,
 };
 //{users.map((user)=>{return <Person name={user.name} age={user.age} />; })}
@@ -54,6 +55,7 @@ export default class App extends React.Component {
               <RecentDonations donations={donations}/>
             <div className="col-8">
               <Progress total={amount.total} goal={amount.goal} />
+              
               <hr />
               <DonationForm />
             </div>

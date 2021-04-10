@@ -5,13 +5,13 @@ import Donation from "./Donation";
 
 
 
-const RecentDonations  = (props) => {
+const RecentDonations  = ({donations}) => {
   
   return (
     <ul>
       <h5>Recent Donations</h5>
       
-      {props.donations.map((user) => (
+      {donations.map((user) => (
         <Donation
           amount={user.amount}
           caption={user.caption}
