@@ -1,0 +1,9 @@
+li {
+    /* font-weight: bold; */
+    font-size: 18px;
+    list-style: none;
+}
+
+ul {
+    background-color: rgb(238, 238, 238);
+}

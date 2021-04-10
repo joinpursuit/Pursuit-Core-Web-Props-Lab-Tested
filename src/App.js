@@ -1,6 +1,10 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+import ProgressBar from "./Components/ProgressBar";
+import DonationForm from "./Components/DonationForm";
 
 import "./App.css";
 
@@ -37,18 +41,27 @@ const donations = [
   },
 ];
 
-export default class App extends React.Component {
+
+class App extends React.Component {
   render() {
     return (
       <>
         <TopBar />
+
         <div className="container">
           <div className="row">
+
+            <RecentDonations 
+            donations={donations}/>
+            
             {/* TODO: Donations */}
 
             <div className="col-8">
+              <Progress total={441} goal={1000}/>
+              <ProgressBar />
               {/* TODO: Progress */}
               <hr />
+              <DonationForm />
               {/* TODO: DonationForm */}
             </div>
           </div>
@@ -57,3 +70,6 @@ export default class App extends React.Component {
     );
   }
 }
+
+
+export default App;
