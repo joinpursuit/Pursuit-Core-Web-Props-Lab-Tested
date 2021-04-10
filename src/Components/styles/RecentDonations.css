@@ -1,0 +1,11 @@
+
+.recentDonations {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+}
+
+.recentDonations ul {
+    list-style: none;
+    padding: 10px;
+}
