@@ -3,6 +3,9 @@ import React from "react";
 import TopBar from "./Components/TopBar";
 
 import "./App.css";
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress"
+import DonationForm from "./Components/DonationForm";
 
 const donations = [
   {
@@ -36,7 +39,11 @@ const donations = [
     name: "Sam",
   },
 ];
-
+const amount = {
+  total: 441,
+  goal: 1000,
+};
+//{users.map((user)=>{return <Person name={user.name} age={user.age} />; })}
 export default class App extends React.Component {
   render() {
     return (
@@ -44,12 +51,11 @@ export default class App extends React.Component {
         <TopBar />
         <div className="container">
           <div className="row">
-            {/* TODO: Donations */}
-
+              <RecentDonations donations={donations}/>
             <div className="col-8">
-              {/* TODO: Progress */}
+              <Progress total={amount.total} goal={amount.goal} />
               <hr />
-              {/* TODO: DonationForm */}
+              <DonationForm />
             </div>
           </div>
         </div>
