@@ -1,7 +1,9 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
-
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+import DonationForm from "./Components/DonationForm";
 import "./App.css";
 
 const donations = [
@@ -36,20 +38,53 @@ const donations = [
     name: "Sam",
   },
 ];
+const sumDonation = () => {
+  let sum = 0;
+  donations.map((donation) => {
+    let amount = donation.amount;
+    sum += amount;
+  });
 
+  return sum;
+};
 export default class App extends React.Component {
   render() {
     return (
       <>
         <TopBar />
+
+        {/* topbar is by itself it is not connected to the container  */}
         <div className="container">
+          {/* RECENTDONATIONS SECTION */}
+
+          {/* PROGRESS BAR AND DONATION FORM SECTION */}
+          {/* CLASSNAME- ROW IS ALSO ANOTHER CONTAINER FOR RIGHT SIDE  */}
           <div className="row">
-            {/* TODO: Donations */}
+            {
+              <div className="recent-donations">
+                {/* this is where the info (donations)is rendered on screen  */}
+                <h2>Recent Donations</h2>
+                {donations.map((donation) => {
+                  return (
+                    <RecentDonations
+                      name={donation.name}
+                      amount={donation.amount}
+                      caption={donation.caption}
+                    />
+                  );
+                })}
+              </div>
+            }
 
             <div className="col-8">
-              {/* TODO: Progress */}
+              {<Progress goal={1000} total={sumDonation()} />}
+              {
+                <progress id="file" value="44.10" max="100">
+                  44.10%
+                </progress>
+              }
               <hr />
-              {/* TODO: DonationForm */}
+              {<DonationForm />}
             </div>
           </div>
         </div>
