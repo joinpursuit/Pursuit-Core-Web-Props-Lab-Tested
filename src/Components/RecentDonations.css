@@ -1,0 +1,14 @@
+div{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(206, 204, 202);
+}
+
+.list-of-donations{
+    list-style: none;
+}
+
+.recent-title{
+    padding: 15px 0 15px 0;
+}
