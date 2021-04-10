@@ -2,7 +2,7 @@ div{
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: rgb(206, 204, 202);
+    /* background-color: rgb(206, 204, 202); */
 }
 
 .list-of-donations{

@@ -9,9 +9,10 @@ const Progress = (props) => {
   // });
   const goal = "$1000"
   return (
-    <section className="progress bar">
-      <h2>Raised ${sum} of {goal}</h2>
-    </section>
+    <div className="progress-bar">
+      
+      <header>Raised ${sum} of {goal}</header>
+    </div>
   );
 };
 

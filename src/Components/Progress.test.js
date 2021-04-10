@@ -3,8 +3,8 @@ import Progress from "./Progress";
 
 describe("Progress", () => {
   it("renders goal out of total", () => {
-    render(<Progress goal={246} total={123} />);
+    render(<Progress goal={1000} total={441} />);
 
-    expect(screen.getByRole("heading", { level: 2 }).textContent).toEqual(`Raised $123 of $246`);
+    expect(screen.getByRole("heading", { level: 2 }).textContent).toEqual(`Raised $441 of $1000`);
   });
 });

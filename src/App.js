@@ -52,8 +52,8 @@ export default class App extends React.Component {
             <RecentDonations donations={donations}/>          
             <div className="col-8">
               <Progres donations={donations}/>
-              <hr />
-              {/* TODO: DonationForm */}
+              <hr/>
+              <DonationForm/>
             </div>
           </div>
         </div>
