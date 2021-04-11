@@ -1,17 +1,23 @@
 import React from "react";
+import Donation from "./Donation";
 
 const RecentDonations = (props) => {
-  // return null;
-
-  const {amount, caption, name, id} = props;
+  const { donations } = props;
   return (
-        <li className="media my-2" key={id}>
-          <div className="media-body">
-            <h5 className="mt-0 mb-1">{name} donated ${amount}</h5>
-            <p>{caption}</p>
-          </div>
-        </li>
-  )
+    <ul className="col-4 list-unstyled recent-donations">
+      <h5 className="my-4">Recent Donations</h5>
+      {donations.map((donation) => {
+        return (
+          <Donation
+            name={donation.name}
+            amount={donation.amount}
+            caption={donation.caption}
+            key={donation.id}
+          />
+        );
+      })}
+    </ul>
+  );
 };
 
 export default RecentDonations;

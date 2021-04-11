@@ -28,7 +28,6 @@ describe("RecentDonations", () => {
   });
 
   it("renders a heading", () => {
-    console.log(screen.getAllByRole("heading"))
     expect(screen.getAllByRole("heading")[0].textContent).toEqual("Recent Donations");
   });
 
