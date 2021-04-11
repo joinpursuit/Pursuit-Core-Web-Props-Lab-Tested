@@ -1,29 +1,43 @@
 import React from 'react'
 
-const DonationForm = props => {
-  let donations = []
-  for (let el in props) {
-    donations.push(props[el])
-  }
-
-  let donators = donations.map(donator => {
-    return (
-      <li className='media my-2'>
-        <div className='media-body'>
-          <h5 className='mt-0 mb-1'>
-            {donator.name} donated ${donator.amount}
-          </h5>
-          {donator.caption}
-        </div>
-      </li>
-    )
-  })
-
+const DonationForm = () => {
   return (
-    <ul className='col-4 list-unstyled recent-donations'>
-      <h5 className='my-4'>Recent Donations</h5>
-      {donators}
-    </ul>
+    <form>
+      <div className='form-group'>
+        <label>Name</label>
+        <input
+          type='text'
+          className='form-control'
+          id='nameInput'
+          placeholder='John Doe'
+        />
+      </div>
+      <div className='form-group'>
+        <label>Caption</label>
+        <input
+          type='text'
+          className='form-control'
+          id='captionInput'
+          placeholder='...'
+        />
+      </div>
+      <div className='form-group'>
+        <label>Amount to Donate</label>
+        <input
+          type='range'
+          className='custom-range'
+          id='amountInput'
+          min='5'
+          max='1000'
+        />
+        <blockquote className='blockquote text-right'>
+          <p className='h3 mb-0'>$ 5</p>
+          <button type='button' className='btn btn-lg btn-success my-4'>
+            Donate
+          </button>
+        </blockquote>
+      </div>
+    </form>
   )
 }
 

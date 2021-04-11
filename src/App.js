@@ -1,65 +1,65 @@
-import React from "react";
-import TopBar from "./Components/TopBar";
+import React from 'react'
+import TopBar from './Components/TopBar'
 import DonationForm from './Components/DonationForm'
 import Progress from './Components/Progress'
 import RecentDonations from './Components/RecentDonations'
-import "./App.css";
+import './App.css'
 
 const donations = [
   {
     amount: 251,
-    caption: "do you luv me",
+    caption: 'do you luv me',
     id: 1,
-    name: "Jo",
+    name: 'Jo'
   },
   {
     amount: 30,
-    caption: "Here take a break from work",
+    caption: 'Here take a break from work',
     id: 2,
-    name: "John",
+    name: 'John'
   },
   {
     amount: 20,
-    caption: "lol",
+    caption: 'lol',
     id: 3,
-    name: "Michelle",
+    name: 'Michelle'
   },
   {
     amount: 110,
-    caption: "",
+    caption: '',
     id: 4,
-    name: "Emily",
+    name: 'Emily'
   },
   {
     amount: 30,
-    caption: "Go to miami",
+    caption: 'Go to miami',
     id: 5,
-    name: "Sam",
-  },
-];
+    name: 'Sam'
+  }
+]
 
-let total = donations.reduce((acc,ele) => {
-    return acc += ele.amount
-},0)
+let total = donations.reduce((acc, ele) => {
+  return (acc += ele.amount)
+}, 0)
 
 const goal = 1000
 
 export default class App extends React.Component {
-  render() {
+  render () {
     return (
       <>
         <TopBar />
-        <div className="container">
-          <div className="row">
-            <DonationForm {...donations}/>
-            <div className="col-8">
+        <div className='container'>
+          <div className='row'>
+            <RecentDonations donations={donations} />
+            <div className='col-8'>
               <Progress total={total} goal={goal} />
               <hr />
-              <RecentDonations />
+              <DonationForm />
             </div>
           </div>
         </div>
       </>
-    );
+    )
   }
 }

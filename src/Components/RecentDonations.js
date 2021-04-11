@@ -1,26 +1,25 @@
-import React from "react";
+import React from 'react'
 
-const RecentDonations = () => {
+const RecentDonations = props => {
+  let donators = props.donations.map((donation, i) => {
+    return (
+      <li className='media my-2' key={i}>
+        <div className='media-body'>
+          <h5 className='mt-0 mb-1'>
+            {donation.name} donated ${donation.amount}
+          </h5>
+          {donation.caption}
+        </div>
+      </li>
+    )
+  })
+
   return (
-    <form>
-      <div className='form-group'>
-        <label>Name</label>
-        <input type="text" className='form-control' id='nameInput' placeholder='John Doe' />
-      </div>
-      <div className = 'form-group'>
-        <label>Caption</label>
-        <input type="text" className='form-control' id='captionInput' placeholder='...' />
-      </div>
-      <div className = 'form-group'>
-        <label>Amount to Donate</label>
-        <input type="range" className='custom-range' id='amountInput' min='5' max='1000' />
-        <blockquote className='blockquote text-right'>
-          <p className='h3 mb-0'>$ 5</p>
-          <button type='button' className='btn btn-lg btn-success my-4'>Donate</button>
-        </blockquote>
-      </div>
-    </form>
+    <ul className='col-4 list-unstyled recent-donations'>
+      <h5 className='my-4'>Recent Donations</h5>
+      {donators}
+    </ul>
   )
-};
+}
 
-export default RecentDonations;
+export default RecentDonations
