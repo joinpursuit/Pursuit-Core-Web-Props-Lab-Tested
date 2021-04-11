@@ -34,7 +34,7 @@ describe("RecentDonations", () => {
   it("renders an item for each donation", () => {
     donations.forEach((donation, index) => {
       expect(screen.getAllByRole("listitem")[index].textContent).toEqual(
-        [`${donation.name} donated $${donation.amount}`, donation.caption].join("")
+        [`${donation.name} donated $${donation.amount}`, donation.caption].join(" ")
       );
     });
   });

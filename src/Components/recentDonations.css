@@ -1,0 +1,17 @@
+.Classes{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(243, 241, 241);
+    width: 300px;
+    padding: 20px;
+}
+
+.recentDonationsHeading{
+    text-align: center;
+}
+
+
+ul .nameAndAmount{
+    list-style: none;
+    /* font-weight: bold; */
+}
