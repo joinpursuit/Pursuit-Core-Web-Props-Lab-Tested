@@ -1,0 +1,16 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    width: 65px;
+    background-color: lightskyblue;
+    border-radius: 2%;
+    align-self: flex-end;
+
+}
+
+p{
+    text-align: right;
+}
