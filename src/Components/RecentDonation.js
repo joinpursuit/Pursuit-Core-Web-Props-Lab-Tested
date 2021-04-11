@@ -4,9 +4,7 @@ const RecentDonation = (props) => {
     const {name, amount, caption} = props
   return (
 
-    <li>{name} donated ${amount} 
-
-    {caption}</li>
+    <li>{name} donated ${amount}{caption}</li>
 
   )
 }
