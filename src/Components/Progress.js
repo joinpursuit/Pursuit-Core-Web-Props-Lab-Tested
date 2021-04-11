@@ -1,7 +1,11 @@
 import React from "react";
 
 const Progress = () => {
-  return null;
+  return(
+    <>
+      <h1></h1>
+    </>
+  )
 };
 
 export default Progress;

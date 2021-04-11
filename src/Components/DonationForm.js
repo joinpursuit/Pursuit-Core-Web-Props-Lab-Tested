@@ -1,7 +1,15 @@
 import React from "react";
 
 const DonationForm = () => {
-  return null;
+  return (
+    <>
+      <input type="text" placeholder="John Doe"></input>
+      <input type="text" placeholder="..."></input>
+      <input type="range" min="5" max="1000"></input>
+      <button>Donate</button>
+    </>
+
+  )
 };
 
 export default DonationForm;
