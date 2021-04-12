@@ -5,7 +5,7 @@ const Progress = () => {
   return (
     <section>
       <div>
-        <h2>Raised $441 of <span>$1000</span></h2>
+        <h2>Raised $123 of <span>$246</span></h2>
       </div>
 
       <div>

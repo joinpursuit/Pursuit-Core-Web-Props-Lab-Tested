@@ -7,7 +7,7 @@ const DonationForm = () => {
         <div>
           <label>Name:</label>
           <br></br>
-          <input type="text" placeholder="Enter name here ..."></input>
+          <input type="text" placeholder="John Doe"></input>
         </div>
 
         <div>
@@ -21,7 +21,7 @@ const DonationForm = () => {
           <br></br>
           <label>Amount to donate:</label>
           <br></br>
-          <input type="range" min="0" max="500" ></input>
+          <input type="range" min="5" max="1000" ></input>
         </div>
         
         <div>
