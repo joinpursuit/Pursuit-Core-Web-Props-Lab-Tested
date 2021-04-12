@@ -1,14 +1,22 @@
 import React from "react";
+import './Donations.css'
 
-const RecentDonations = (props) => {
-  const {amount, caption, name } = props
+
+function RecentDonations(props) {
+  const  { name, amount, caption } = props
   return (
-    <div className='donations'>
-      <p>Recent Donations</p>
-      <p>{name} ${amount}</p>
-      <p>{caption}</p>
-    </div>
+		<div className='recentDonations'>
+			<ul>
+				<li>
+					<h4>Recent Donations</h4>
+				</li>
+				<h4>
+					<li>{name} donated ${amount}</li>
+				</h4>
+				<p>{caption}</p>
+			</ul>
+		</div>
   )
-};
+}
 
-export default RecentDonations;
+export default RecentDonations
