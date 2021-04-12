@@ -4,6 +4,10 @@ import TopBar from "./Components/TopBar";
 
 import "./App.css";
 
+import RecentDonations from "./Components/RecentDonations.js"
+import DonationForm from "./Components/DonationForm.js"
+
+
 const donations = [
   {
     amount: 251,
@@ -53,6 +57,8 @@ export default class App extends React.Component {
             </div>
           </div>
         </div>
+        <RecentDonations />
+        <DonationForm />
       </>
     );
   }
