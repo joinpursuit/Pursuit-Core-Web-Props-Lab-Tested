@@ -1,0 +1,4 @@
+.donations{
+    display: flex;
+    flex-direction: column;
+}
