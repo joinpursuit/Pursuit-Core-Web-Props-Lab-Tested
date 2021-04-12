@@ -1,59 +1,102 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+import DonationForm from "./Components/DonationForm";
 
 import "./App.css";
 
-const donations = [
-  {
-    amount: 251,
-    caption: "do you luv me",
-    id: 1,
-    name: "Jo",
-  },
-  {
-    amount: 30,
-    caption: "Here take a break from work",
-    id: 2,
-    name: "John",
-  },
-  {
-    amount: 20,
-    caption: "lol",
-    id: 3,
-    name: "Michelle",
-  },
-  {
-    amount: 110,
-    caption: "",
-    id: 4,
-    name: "Emily",
-  },
-  {
-    amount: 30,
-    caption: "Go to miami",
-    id: 5,
-    name: "Sam",
-  },
-];
 
-export default class App extends React.Component {
-  render() {
+
+class App extends React.Component {
+
+    donations = [
+      {
+        id: 1,
+        name: "Jo",
+        amount: 50,
+        caption: "do you luv me"
+      },
+      {
+        id: 2,
+        name: "John",
+        amount: 100,
+        caption: "Here take a break from work"
+      },
+      {
+        id: 3,
+        name: "Michelle",
+        amount: 150,
+        caption: "lol"
+      },
+      {
+        id: 4,
+        name: "Emily",
+        amount: 200,
+        caption: ""
+      },
+      {
+        id: 5,
+        name: "Sam",
+        amount: 300,
+        caption: "Go to miami"
+      },
+    ];
+    
+    total = () => {
+      let sum = 0;
+      this.donations.forEach((amt)=>{
+        sum +=  amt.amount;
+      })
+      return sum;
+    }
+
+  render = () => {
     return (
       <>
         <TopBar />
         <div className="container">
+
           <div className="row">
-            {/* TODO: Donations */}
+              
+            <ul class="col-4 list-unstyled recent-donations">
+              <h5 class='my-4'>Recent Donations</h5>
+
+              {this.donations.map((donation, i) => {
+                
+                return (
+                  <RecentDonations
+
+                  key={i}
+                  id={donation.id} 
+                  name={donation.name} 
+                  amount={donation.amount} 
+                  caption={donation.caption}
+
+                  />
+                );
+
+              })}
+
+            </ul>
 
             <div className="col-8">
-              {/* TODO: Progress */}
+              
+              <Progress sum={this.total()} percentage={((this.total()/1000)*100)+"%"}/>
               <hr />
-              {/* TODO: DonationForm */}
+              <DonationForm />
+            
             </div>
+          
           </div>
+        
         </div>
       </>
     );
   }
 }
+
+
+
+export default App;
