@@ -1,4 +1,5 @@
 import React from 'react';
+import "./RecentDonations.css"
 
 const Donations = (props) => {
     const {amount, caption, name,} = props
@@ -12,14 +13,5 @@ const Donations = (props) => {
     );
   };
 
-// const Donations = ({donations}) =>{
-//     return (
-//         <div>
-//             <h4>Recent Donations</h4>
-//             {donations.map((donation) =>{return <RecentDonations name={donation.name} amount={donation.amount} caption={donation.caption} key={donation.id}/>
-//             })}
-//         </div>
-//     )
-// }
 
 export default Donations;

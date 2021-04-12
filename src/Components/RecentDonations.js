@@ -1,16 +1,6 @@
 import React from "react";
 import Donations from './Donations'
-
-// const RecentDonations = (props) => {
-//   const {amount, caption, name,} = props
-//   return (
-//       <div className="donations">
-//           <li>
-//             {name} donated ${amount}{caption}
-//           </li>
-//       </div>
-//   );
-// };
+// import "./RecentDonations.css"
 
 
 const RecentDonations = ({donations}) =>{

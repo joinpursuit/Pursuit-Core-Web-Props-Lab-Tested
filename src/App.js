@@ -1,6 +1,7 @@
 import React from "react";
 import TopBar from "./Components/TopBar";
 import RecentDonations from "./Components/RecentDonations"
+import Progress from "./Components/Progress";
 import "./App.css";
 
 
@@ -49,6 +50,7 @@ export default class App extends React.Component {
             <div className="col-8">
               {/* TODO: Progress */}
               <hr />
+              <progress/>
               {/* TODO: DonationForm */}
             </div>
           </div>
