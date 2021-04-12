@@ -1,9 +1,6 @@
 import React from "react";
-
 import TopBar from "./Components/TopBar";
-
-import RecentDonations from "./Components/RecentDonations";
-
+import RecentDonations from "./Components/RecentDonations"
 import "./App.css";
 
 
@@ -48,9 +45,7 @@ export default class App extends React.Component {
         <div className="container">
           <div className="row">
             {/* TODO: Donations */}
-            {donations.map((donation) =>{
-              return <RecentDonations name={donation.name} amount={donation.amount} caption={donation.caption} key={donation.id}/>
-            })}
+              <RecentDonations donations={donations}/>
             <div className="col-8">
               {/* TODO: Progress */}
               <hr />
