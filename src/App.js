@@ -1,6 +1,9 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+import DonationForm from "./Components/DonationForm"
 
 import "./App.css";
 
