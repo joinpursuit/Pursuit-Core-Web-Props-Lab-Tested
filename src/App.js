@@ -6,7 +6,7 @@ import "./App.css";
 
 import RecentDonations from "./Components/RecentDonations.js"
 import DonationForm from "./Components/DonationForm.js"
-
+import Progress from "./Components/Progress.js"
 
 const donations = [
   {
@@ -49,16 +49,17 @@ export default class App extends React.Component {
         <div className="container">
           <div className="row">
             {/* TODO: Donations */}
-
+            <RecentDonations />
             <div className="col-8">
               {/* TODO: Progress */}
+              <Progress />
               <hr />
               {/* TODO: DonationForm */}
+              <DonationForm />
             </div>
           </div>
         </div>
-        <RecentDonations />
-        <DonationForm />
+        
       </>
     );
   }
