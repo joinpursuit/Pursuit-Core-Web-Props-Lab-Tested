@@ -1,6 +1,9 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
+import RecentDonations from "./Components/RecentDonations"
+import Progress from "./Components/Progress"
+import DonationForm from "./Components/DonationForm"
 
 import "./App.css";
 
@@ -37,19 +40,31 @@ const donations = [
   },
 ];
 
+let total = 0
+let goal = 1000
+
+donations.forEach((item) => {
+  total = total + item.amount
+})
+console.log(total)
+
 export default class App extends React.Component {
+
+
   render() {
     return (
       <>
         <TopBar />
         <div className="container">
           <div className="row">
-            {/* TODO: Donations */}
-
+            <RecentDonations donations={donations}/>  
+            {/* Here, we are only calling the component, and passing it the donations array as props,
+            with the name 'array' as the variable to be accessed in the RecentDonations component. We will 
+            define all rendering instrucitons, as well as handling of the data in the RecentDonations component */}
             <div className="col-8">
-              {/* TODO: Progress */}
+              <Progress goal={goal} total={total}/>
               <hr />
-              {/* TODO: DonationForm */}
+              <DonationForm />
             </div>
           </div>
         </div>
