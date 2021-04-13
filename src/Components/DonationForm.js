@@ -14,7 +14,7 @@ const DonationForm = () => {
         <input type="range" min="5" max="1000" class="slider" id="my-range" />
       </div>
       <p id="range-output"></p>
-      <input type="submit"></input>
+      <button>Donate</button>
     </form>
   </>
   );

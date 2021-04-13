@@ -26,9 +26,9 @@ function PropsArray() {
     for (let item of donations) {
         total += item.amount
     }
-    const donationsAmount = donations.map(donation => {
-        return (<Progress amount={donation.amount}/>)
-    })
+    // const donationsAmount = donations.map(donation => {
+    //     return (<Progress amount={donation.amount}/>)
+    // })
 
 
     return (
