@@ -1,1 +1,18 @@
-/* Your code here! */
+.donationTable{
+    background-color: lightgrey;
+}
+
+.donationTable > h6 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.donationTable p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+    width: 300px;
+}
+
+input[type='text'] {
+    width: 400px;
+}
