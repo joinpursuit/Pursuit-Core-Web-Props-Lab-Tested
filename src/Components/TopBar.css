@@ -1,8 +1,6 @@
 @font-face {
     font-family: "zapfino";
-    src: url(../fonts/ZapfinoLinotypeOne.ttf);
-    font-style: normal;
-    font-weight: 100;
+    src: url(./fonts/ZapfinoLinotypeOne.ttf); 
 }
 
 
@@ -10,4 +8,5 @@
     font-family: zapfino;
     font-weight: 100;
     font-size: 80px;
+    font-style: normal;
 } 
