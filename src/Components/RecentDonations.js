@@ -1,14 +1,16 @@
 import React from "react";
-
+import RecentDonation from "./RecentDonation";
 const RecentDonations = (props) => {
-  const { name, caption, amount } = props;
+  const { donations } = props;
+
   return (
     <div className="DonationsContainer">
       <h4>Recent Donations</h4>
-      <p>
-        {name} donated $ {amount}
-      </p>
-      <p> {caption} </p>
+      <ul>
+        {donations.map((donation) => {
+          return <RecentDonation name={donation.name} amount={donation.amount} caption={donation.caption} />;
+        })}
+      </ul>
     </div>
   );
 };
