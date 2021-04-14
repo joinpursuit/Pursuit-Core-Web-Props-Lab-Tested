@@ -1,1 +1,37 @@
 /* Your code here! */
+
+.formInput {
+    width: 100%;
+    padding: 5px;
+}
+
+.button {
+    float: right;
+    color: white;
+    background-color: green;
+    width: 100px;
+    font-size: larger;
+}
+
+.uList {
+    list-style: none;
+    background-color: lightgrey;
+    padding: 5px;
+    width: 30%;
+}
+.uList > h5 {
+    text-decoration: underline;
+}
+.captions {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.me {
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.progressBar {
+    width: 100%;
+}

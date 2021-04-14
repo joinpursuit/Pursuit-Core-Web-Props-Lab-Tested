@@ -10,7 +10,7 @@ const Progress = (props) => {
       </div>
 
       <div>
-        <input type="range"></input>
+        <input type="range" className="progressBar"></input>
       </div>
     </section>
   )

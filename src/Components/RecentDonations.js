@@ -4,15 +4,16 @@ const RecentDonations = props => {
   const donated = props.donations.map((props,i) => {
     return (
       <li key={i}>
-        <p>{props.name} donated ${props.amount}</p>
-        <p>{props.caption}</p>
+        <p><strong>{props.name} donated ${props.amount}</strong></p>
+        <p className="captions">{props.caption}</p>
       </li>
     )
   })
 
   return (
-    <ul>
+    <ul className="uList">
       <h5>Recent Donations</h5>
+      <br></br>
       <p>{donated}</p>
     </ul>
   )
