@@ -1,7 +1,19 @@
 import React from "react";
 
-const Progress = () => {
-  return null;
+
+const Progress = (props) => {
+  const {total,goal} = {...props}
+  return (
+    <section>
+      <div>
+        <h2>Raised ${total} of <span>${goal}</span></h2>
+      </div>
+
+      <div>
+        <input type="range" className="progressBar"></input>
+      </div>
+    </section>
+  )
 };
 
 export default Progress;
