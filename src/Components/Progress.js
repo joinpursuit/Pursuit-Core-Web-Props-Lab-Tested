@@ -1,11 +1,12 @@
 import React from "react";
 
 
-const Progress = () => {
+const Progress = (props) => {
+  const {total,goal} = {...props}
   return (
     <section>
       <div>
-        <h2>Raised $123 of <span>$246</span></h2>
+        <h2>Raised ${total} of <span>${goal}</span></h2>
       </div>
 
       <div>

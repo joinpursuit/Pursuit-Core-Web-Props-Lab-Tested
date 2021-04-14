@@ -5,7 +5,7 @@ const TopBar = () => {
     <section className="jumbotron text-center">
       <h1 className="jumbotron-heading">Go Fund <i>Me</i></h1>
       <p className="lead text-muted">
-        Help me go on a vacation to a beach somewhere!
+        Help me go on a vacation to a beach somewhere
       </p>
     </section>
   );

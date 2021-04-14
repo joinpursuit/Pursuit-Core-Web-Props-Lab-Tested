@@ -4,9 +4,11 @@ import TopBar from "./Components/TopBar";
 
 import "./App.css";
 
-import RecentDonations from "./Components/RecentDonations.js"
-import DonationForm from "./Components/DonationForm.js"
-import Progress from "./Components/Progress.js"
+import RecentDonations from "./Components/RecentDonations.js";
+import DonationForm from "./Components/DonationForm.js";
+import Progress from "./Components/Progress.js";
+
+
 
 const donations = [
   {
@@ -41,6 +43,12 @@ const donations = [
   },
 ];
 
+const total = donations.reduce((acc, ele) => {
+  return (acc += ele.amount);
+}, 0);
+const goal = 1000;
+
+
 export default class App extends React.Component {
   render() {
     return (
@@ -49,17 +57,16 @@ export default class App extends React.Component {
         <div className="container">
           <div className="row">
             {/* TODO: Donations */}
-            <RecentDonations />
+            <RecentDonations donations={donations} />
             <div className="col-8">
               {/* TODO: Progress */}
-              <Progress />
+              <Progress goal={goal} total={total} />
               <hr />
               {/* TODO: DonationForm */}
               <DonationForm />
             </div>
           </div>
         </div>
-        
       </>
     );
   }

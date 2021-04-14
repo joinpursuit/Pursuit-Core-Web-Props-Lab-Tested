@@ -1,38 +1,35 @@
 import React from "react";
 
-const RecentDonations = () => {
+const RecentDonations = props => {
+  const donated = props.donations.map((props,i) => {
+    return (
+      <li key={i}>
+        <p>{props.name} donated ${props.amount}</p>
+        <p>{props.caption}</p>
+      </li>
+    )
+  })
 
   return (
-    <section>
-      <div>
-        <h3>Recent Donations</h3>
-      </div>
-
-      <div>
-        <p>Jo donated $251</p>
-        <p>do you luv me</p>
-      </div>
-
-      <div>
-        <p>John donated $30</p>
-        <p>Here take a break from work</p>
-      </div>
-
-      <div>
-        <p>Michelle donated $20</p>
-        <p>lol</p>
-      </div>
-
-      <div>
-        <p>Emily donated $110</p>
-      </div>
-
-      <div>
-        <p>Sam donated $30</p>
-        <p>Go to miami</p>
-      </div>
-    </section>
+    <ul>
+      <h5>Recent Donations</h5>
+      <p>{donated}</p>
+    </ul>
   )
-};
+}
+
+
+// const RecentDonations = (props, i) => {
+//   const {amount,caption,name} = props
+//   console.log(props)
+
+//   return (
+//     <ul>
+//       <li>id: {i}</li>
+//       <li>{name} donated ${amount}</li>
+//       <li>{caption}</li>
+//     </ul>
+//   )
+// };
 
 export default RecentDonations;
