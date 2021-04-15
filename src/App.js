@@ -38,15 +38,6 @@ const donations = [
   },
 ];
 
-const listDonations = donations.map((donation) => {
-  return (
-    <RecentDonations
-      name={donation.name}
-      donation={donation.amount}
-      caption={donation.caption}
-    />
-  );
-});
 let sum = 0;
 const total = donations.map((elem) => {
   return (sum += elem.amount);
@@ -60,11 +51,10 @@ export default class App extends React.Component {
         <div className="container">
           <div className="row">
             <ul className="col-4 list-unstyled recent-donations">
-              <h5 className="my-4">Recent Donations</h5>
-              {listDonations}
+              <RecentDonations donations={donations} />
             </ul>
             <div className="col-8">
-              <Progress total={sum} />
+              <Progress total={sum} goal={1000} />
               <hr />
               <DonationForm />
             </div>
