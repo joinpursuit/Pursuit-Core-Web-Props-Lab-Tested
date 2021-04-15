@@ -42,14 +42,15 @@ const donations = [
 
 export default class App extends React.Component {
   render() {
+
     return (
       <>
         <TopBar />
         <div className="container">
           <div className="row">
-            <RecentDonations />
+            <RecentDonations donations={donations}/>
             <div className="col-8">
-              <Progress />
+              <Progress total={441} goal={1000}/>
               <hr />
               <DonationForm />
             </div>

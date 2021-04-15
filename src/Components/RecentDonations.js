@@ -1,13 +1,23 @@
-import React from "react";
+import React from 'react'
 
-const RecentDonations = ({ name, amount, caption}) => {
+const RecentDonations = (props) => {
+  
+  const listItem = props.donations.map((donation, i) => {
+    return (
+      <li key={i}>
+        <p>{donation.name} donated ${donation.amount}</p>
+        <p>{donation.caption}</p>
+      </li>
+      
+    )
+  })
+
   return (
-    <>
+    <ul>
       <h1>Recent Donations</h1>
-      <p>{name} donated ${amount}</p>
-      <p>{caption}</p>
-    </>
+      {listItem}
+    </ul>
   )
-};
+}
 
-export default RecentDonations;
+export default RecentDonations
