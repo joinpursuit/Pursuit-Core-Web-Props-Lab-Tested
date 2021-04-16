@@ -1,14 +1,11 @@
 import React from "react";
 
-const RecentDonation = (props) => {
-    const {name, amount, caption} = props
-  return (
 
-    <li>{name} donated ${amount} 
 
-    {caption}</li>
-
-  )
+const RecentDonation =({name, amount, caption})=>{
+    return(
+        <li><strong>{name} donated ${amount}</strong><br></br>{caption}</li>
+    )
 }
 
-export default RecentDonation;
+export default RecentDonation
