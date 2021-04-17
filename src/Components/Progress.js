@@ -2,13 +2,15 @@ import React from "react";
 
 
 const Progress = (props) => {
-  const {total} = props
+  const {total, goal} = props
   return (
     <>
-    <h2>Raised ${total} of <span className="text-muted">$246</span></h2>
+    <div>
+    <h2>Raised ${total} of ${goal}</h2>
+    </div>
     
     <div className="progress">
-        <div id="percentage">44.10%</div>
+      <p></p>
       </div>
     </>
   )
