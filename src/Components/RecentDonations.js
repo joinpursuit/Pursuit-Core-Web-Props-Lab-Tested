@@ -1,8 +1,10 @@
 import React from 'react'
 
 const RecentDonations = (props) => {
+
+  const {donations} = props
   
-  const listItem = props.donations.map((donation, i) => {
+  const listItem = donations.map((donation, i) => {
     return (
       <li key={i}>
         <p>{donation.name} donated ${donation.amount}</p>
@@ -13,10 +15,10 @@ const RecentDonations = (props) => {
   })
 
   return (
-    <ul>
+    <div>
       <h1>Recent Donations</h1>
       {listItem}
-    </ul>
+    </div>
   )
 }
 

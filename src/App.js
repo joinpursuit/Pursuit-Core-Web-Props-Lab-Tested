@@ -41,8 +41,16 @@ const donations = [
 ];
 
 export default class App extends React.Component {
-  render() {
 
+  render() {
+    
+    let total = 0
+
+    donations.map((donation) => {
+      total += donation.amount
+      return total
+    })
+    
     return (
       <>
         <TopBar />
@@ -50,7 +58,7 @@ export default class App extends React.Component {
           <div className="row">
             <RecentDonations donations={donations}/>
             <div className="col-8">
-              <Progress total={441} goal={1000}/>
+              <Progress total={total} goal={1000}/>
               <hr />
               <DonationForm />
             </div>
