@@ -5,7 +5,7 @@ const Progress = (props) => {
   return (
     <div>
       <h2>
-        Raised ${total} of <span> ${goal}</span>
+        Raised ${total} of ${goal}
       </h2>
     </div>
   )

@@ -1,20 +1,26 @@
-const RecentDonations = (props) => {
+import React from "react";
 
-  const recentDonations = props.donations.map((donation, i) => {
+const RecentDonations = (props) => {
+  const users = props.donation.map((donation, e) => {
     return (
-      <li key={i}>
-        <h3>{donation.name} donated ${donation.amount}</h3>
-        <p>{donation.caption}</p>
-      </li>
+      <>
+        <h5 key={e}>
+          {donation.name} donated ${donation.amount}
+          </h5>
+        <p key={e}>
+          {donation.caption}
+          </p>
+      </>
     )
   })
-
+  
   return (
     <>
-      <h3>Recent Donations</h3>
-      {recentDonations}
+      <h1>Recent Donations</h1>
+      <ul>{users}</ul>
+
     </>
-  )
+  );
 };
 
 export default RecentDonations;

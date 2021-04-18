@@ -1,7 +1,7 @@
 import React from "react";
 
 import TopBar from "./Components/TopBar";
-// import RecentDonations from "./Components/RecentDonations";
+import RecentDonations from "./Components/RecentDonations";
 import Progress from "./Components/Progress";
 import DonationForm from "./Components/DonationForm"
 
@@ -47,10 +47,8 @@ export default class App extends React.Component {
         <TopBar />
         <div className="container">
           <div className="row">
-            {/* TODO: Donations */}
-              {/* <RecentDonations /> */}
+              <RecentDonations donation= {donations} />
             <div className="col-8">
-              {/* TODO: Progress */}
               <Progress total={441} goal={1000}/>
               <hr />
               <DonationForm />
