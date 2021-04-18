@@ -42,7 +42,7 @@ const RecentDonations = () => {
       {donations.map((donation, i) => {
         
     return (
-      <li className="media my-2">
+      <li className="media my-2" key={i}>
       <div className="media-body">
         <h5 className="mt-0 mb-1">
         {donation.name} donated ${donation.amount}
