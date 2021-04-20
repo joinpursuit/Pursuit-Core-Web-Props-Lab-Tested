@@ -45,7 +45,7 @@ const donations = [
 
 let total = 0
 donations.map((donationAmount) => {
-  total += donationsAmount.amount
+  total += donationAmount.amount
   return total
 })
 
