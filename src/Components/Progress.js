@@ -1,25 +1,32 @@
 import React from "react";
 
 const Progress = (props) => {
-  // const { goal, total } = props;
-  // debugger
+  const { donations } = props;
+  let newTotal = 0;
+  let percentage = 0;
+  donations.forEach((donation) => {
+    newTotal += donation.amount;
+    percentage = (newTotal/1000)*100;
+  });
+
   return (
-    // <!-- RIGHT SIDE / INFO & FORM -->
     <div className="col-8">
       {/* <!-- INFO --> */}
       <h2 className="mb-4">
-        Raised $441 of <span className="text-muted">$1000</span>
+        Raised ${newTotal} of <span className="text-muted">$1000</span>
       </h2>
-      <div className="progress">
+      <div className="progress progress-striped active">
         <div
           className="progress-bar bg-success"
           role="progressbar"
-          styles="width: 25%"
-          aria-valuenow="25"
+          styles="width: 44"
+          style={{width: percentage + "%"}}
+          aria-valuenow="88"
           aria-valuemin="0"
           aria-valuemax="100"
+          
         >
-          25%
+          {percentage.toFixed(2)}%
         </div>
       </div>
       <hr />
