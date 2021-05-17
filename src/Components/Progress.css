@@ -1,0 +1,13 @@
+.myProgress {
+  width: 100%;
+  background-color: #eee;
+}
+
+.progress {
+  width: 50%;
+  height: 15px;
+  background-color: rgb(6, 172, 6);
+  text-align: center;
+  line-height: 15px;
+  color: white;
+}
