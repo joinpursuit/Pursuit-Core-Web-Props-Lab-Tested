@@ -1,5 +1,3 @@
-
-
 const RecentDonations = (props) => {
   const { donations } = props
 
